@@ -6,17 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body id="b">
-    <h3>write a colour name:</h3>
-    <input type="text" id="color">
-    <button onclick="change_color()">change colour</button>
+<body>
+    <h1>
+        COUNTER
+    </h1>
+    <h1 id="counter">
+        0
+
+    </h1>
+    <button onclick="increase()">INCREASE</button>
+    <button onclick="reset()">RESET</button>
+    <button onclick="decrease()">DECREASE</button>
     <script>
-        function change_color(){
-            a=document.getElementById("color").value;
-            b=document.getElementById("b");
-            b.style.backgroundColor=a;
-        
+        var i=0;
+        function increase(){
+            a=document.getElementById("counter");
+            a.innerHTML=i;
+            i=i+1;
+        }   
+        function reset(){
+            i=0;
+            a=document.getElementById("counter");
+            a.innerHTML=i;
         }
+        function decrease(){
+            i=i-1;
+            a=document.getElementById("counter");
+            a.innerHTML=i;
+
+        }
+
     </script>
 </body>
 </html>
