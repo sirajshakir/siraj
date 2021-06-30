@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last message delivered</title>
+    <style>
+        button{
+            color:chartreuse;
+            background-color: darkblue;
+            padding: 5px;
+        }
+        input{
+            padding:5px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        A message would you like to pass
+    </h1>
+    <input type="text" id="input">
+    <button onclick="output()">submit</button>
+    <p>
+        your last message delivered:
+    </p>
+    <h1 id="text" ></h1>
+    <script>
+        function output(){
+            a=document.getElementById("input");
+            if(a.value==""){
+                alert("WARNING!!! you didn't type a message")
+            }else{
+                b=document.getElementById("text");
+                b.innerHTML=a.value;
+                a.value=""
+            }
+         
+          
+            
+
+          
+            
+
+            
+        }
+    </script>
+</body>
+</html>
